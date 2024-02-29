@@ -10,12 +10,25 @@
 }
 
 header{
+    display: flex;
     overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.6rem;
+
+    padding: 10rem 0 0 10rem;
+    width: 100vw;
+    height: 100vh;
+    
+    overflow: hidden;
+    position: relative;
 }
 
 header::before{
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1 ;
@@ -36,8 +49,17 @@ header::before{
     --black: #000;
 }
 
+::selection {
+    color: var(--white);
+    color: var(--black);
+}
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     position: relative;
+    
 }
 
 
@@ -51,19 +73,32 @@ h1{
     margin: 0 5.4rem;
 }
 
+h2{
+   font-family: var(--font-title);
+   font-weight: 700;
+   font-size: 4rem;
+}
+
+p{
+    font-family: var(--font-body);
+    font-size: 2rem;
+}
+
 span#subtitle{
     color: white;
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: var(--font-chef);
     text-shadow: -7px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 0.82px;
     display: block;
     margin: 2rem 5.4rem;
 }
 
-a{
+.botao{
+    display: flex;
+    gap: 1rem;
     color: var(--destak-color);
     margin: 2rem 5.4rem;
     font-family: var(--font-button);
@@ -85,6 +120,21 @@ a:hover{
         transform: scale(1.5);
     }
 
+}
+
+#secao-apresentacao{
+    display: flex;
+    gap: 3rem;
+    /* align-items: center; */
+    padding: 2rem;
+
+
+}
+
+#avatar{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
 }
 
 
