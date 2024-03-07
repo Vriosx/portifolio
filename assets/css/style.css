@@ -34,7 +34,6 @@ header::before{
     z-index: -1 ;
     background: url("../images/Background.png"), lightgray 50% / cover no-repeat;
     background-size: cover ;
-    animation: zoom 8s forwards;
     /* display: block; */
 
 }
@@ -112,15 +111,6 @@ a:hover{
     opacity: .8;
 }
 
-@keyframes zoom{
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(1.5);
-    }
-
-}
 
 #secao-apresentacao{
     display: flex;
@@ -137,5 +127,54 @@ a:hover{
     width: 300px;
 }
 
+#secao-projetos{
+    height: 100vh;
+    background-color: #252939;
+}
 
+#secao-projetos ul{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+#secao-projetos li{
+    list-style: none;
+}
+
+.card{
+   max-width: 300px;
+   height: 420px;
+   color: var(--white);
+   position: relative;
+   cursor: pointer;
+}
+
+.card:hover .image-wrapper{
+    opacity: .3;
+}
+
+.card:hover .card-text{
+    opacity: 1;
+    transition: .5s;
+}
+
+.image-wrapper{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-text{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
 
